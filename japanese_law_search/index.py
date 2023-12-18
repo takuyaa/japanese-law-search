@@ -11,7 +11,7 @@ from japanese_law_search.client import Client
 from japanese_law_search.model import Document
 
 
-def index_law(index_name: str, path: str, es_host: str) -> None:
+def index_law(es_host: str, index_name: str, path: str) -> None:
     parser = LawParser()
     client = Client(index=index_name,host=es_host)
 

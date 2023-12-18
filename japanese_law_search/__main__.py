@@ -5,12 +5,12 @@ from japanese_law_search.search import search_law
 
 class Index:
     def index(self, index_name: str = "ja_law", path: str = "./data", es_host = "http://localhost:9200/") -> None:
-        return index_law(index_name=index_name, path=path, es_host=es_host)
+        return index_law(es_host=es_host, index_name=index_name, path=path)
 
     def search(
-        self, index_name: str = "ja_law", keyword: str = "test", size: int = 10
+        self, index_name: str = "ja_law", keyword: str = "test", size: int = 10, es_host = "http://localhost:9200/"
     ) -> None:
-        return search_law(index_name=index_name, keyword=keyword, size=size)
+        return search_law(es_host=es_host, index_name=index_name, keyword=keyword, size=size)
 
 
 def main() -> None:

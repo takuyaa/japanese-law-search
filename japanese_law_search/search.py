@@ -2,8 +2,8 @@ from japanese_law_search.client import Client
 from japanese_law_search.model import Response
 
 
-def search_law(index_name: str, keyword: str, size: int) -> Response:
-    client = Client(index=index_name)
+def search_law(es_host: str, index_name: str, keyword: str, size: int) -> Response:
+    client = Client(index=index_name, host=es_host)
     return client.search(
         query={
             "multi_match": {

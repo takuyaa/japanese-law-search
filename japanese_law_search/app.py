@@ -6,7 +6,7 @@ st.title("Japanese Law Search")
 
 query = st.text_input("Query", value="")
 if query:
-    res = search_law(index_name="ja_law", keyword=query, size=20)
+    res = search_law(es_host="http://localhost:9200/", index_name="ja_law", keyword=query, size=20)
     st.write(f"{res.total_hits} hits")
     for doc in res.docs:
         c = st.container(border=True)
