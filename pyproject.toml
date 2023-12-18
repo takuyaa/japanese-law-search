@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "japanese-law-search"
+version = "0.1.0"
+description = ""
+authors = ["Takuya Asano <takuya.a@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "japanese_law_search" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic = "^2.4.2"
+pydantic-xml = { extras = ["lxml"], version = "^2.3.0" }
+elasticsearch = "^8.11.1"
+fire = "^0.5.0"
+streamlit = "^1.29.0"
+ja-law-parser = "^0.1.0"
+tqdm = "^4.66.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
