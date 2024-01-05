@@ -23,6 +23,12 @@
           }
         }
       },
+      "law_title_embedding_512": {
+        "type":"dense_vector",
+        "dims": 768,
+        "index": true,
+        "similarity": "l2_norm"
+      },
       "enact_statement": {
         "type": "text",
         "fields": {

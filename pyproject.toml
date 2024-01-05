@@ -15,6 +15,11 @@ fire = "^0.5.0"
 streamlit = "^1.29.0"
 ja-law-parser = "^0.1.0"
 tqdm = "^4.66.1"
+transformers = "^4.23.1"
+numpy = "^1.23.4"
+torch = "^2.1.2"
+fugashi = {extras = ["unidic-lite"], version = "^1.2.0"}
+ipadic = "^1.0.0"
 
 
 [tool.poetry.group.dev.dependencies]
